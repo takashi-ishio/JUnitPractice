@@ -50,6 +50,7 @@ public class Triangle {
 	 * @return 辺の長さから、Type で表される三角形のどれかを判定し、対応するものを返す。
 	 */
 	public static Type getType(int a, int b, int c) {
+		// 注意! この実装は不完全です。
 		if (a==b && b==c) return Type.Equilateral;
 		return null;
 	}

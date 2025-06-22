@@ -25,6 +25,7 @@ public class PrimeNumbers {
 	 * @return 素数であれば true, そうでなければ false を返す
 	 */
 	public static boolean isPrime(int n) {
+		// 注意! この実装は不完全です。
 		int s = (int)Math.sqrt(n);
 		for (int i=2; i<=s; i++) {
 			if (n % s == 0) {
