@@ -5,6 +5,8 @@ package example;
  */
 public class TaxiFareCalculator {
 
+	public static int MAX_DISTANCE = 9999999;
+	
 	private int distance;
 	
 	/**
@@ -32,7 +34,7 @@ public class TaxiFareCalculator {
 	/**
 	 * 走行距離に応じた料金を返す。
 	 * 運賃計算ルール: 最初の 1500 メートルは 500 円。追加 300 メートルごとに 100円。
-	 * 距離が 0 以下であったり、10,000,000 以上であったらエラーとして 0 を返す。
+	 * 距離が 0 未満あるいは MAX_DISTANCE を超過した距離のときは、エラーとして 0 を返す。
 	 * @return 計算した金額。
 	 */
 	public int getFare() {
