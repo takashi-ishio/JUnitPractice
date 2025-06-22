@@ -16,23 +16,27 @@ public class TaxiFareCalculator {
 	
 	/**
 	 * 走行距離を追加する
-	 * @param d 走行した距離
+	 * @param d 走行した距離。単位はメートル。
 	 */
 	public void addDistance(int d) {
 		distance += d;
 	}
 	
 	/**
-	 * @return 現在までの走行距離の合計を返す
+	 * @return 現在までの走行距離の合計を返す。単位はメートル。
 	 */
 	public int getDistance() {
 		return distance;
 	}
 	
 	/**
-	 * 走行距離に応じた料金を返す
+	 * 走行距離に応じた料金を返す。
+	 * 運賃計算ルール: 最初の 1500 メートルは 500 円。追加 300 メートルごとに 100円。
+	 * 距離が 0 以下であったり、10,000,000 以上であったらエラーとして 0 を返す。
+	 * @return 計算した金額。
 	 */
 	public int getFare() {
+		// 注意! この実装は不完全です。
 		return 0;
 	}
 	
